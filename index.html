@@ -134,6 +134,8 @@
       aspect-ratio: 4 / 5; border-radius: var(--radius);
       background: linear-gradient(135deg, var(--accent), #7fb8e0);
       display: grid; place-items: center; color: #fff; font-size: 4rem; font-weight: 700;
+      width: 100%; max-width: 360px; object-fit: cover; object-position: center top;
+      border: 1px solid var(--border);
     }
     .about-text p { color: var(--muted); margin-bottom: 20px; font-size: 1.05rem; }
     .about-text strong { color: var(--text); }
@@ -159,7 +161,8 @@
     }
     .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
     .card.hide { display: none; }
-    .card-thumb { aspect-ratio: 16 / 9; display: grid; place-items: center; font-size: 2.5rem; background: var(--accent-soft); }
+    .card-thumb { aspect-ratio: 16 / 9; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+    .card-thumb svg { width: 100%; height: 100%; padding: 8px 12px; }
     .card-body { padding: 24px; }
     .card-tag { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
     .card-title { font-size: 1.12rem; font-weight: 700; margin: 6px 0 8px; line-height: 1.45; }
@@ -309,8 +312,7 @@
         <p class="section-label reveal">About</p>
         <h2 class="section-title reveal">자기소개</h2>
         <div class="about-grid">
-          <!-- 프로필 사진이 있다면 아래 div를 <img src="profile.jpg" class="about-img" alt="김진겸"> 로 교체하세요 -->
-          <div class="about-img reveal">JG</div>
+          <img src="profile.jpg" class="about-img reveal" alt="김진겸 프로필 사진" />
           <div class="about-text reveal delay-1">
             <p><strong>김진겸 (Jin Gyeom Kim)</strong><br />석박사통합과정 (박사과정) · 인체영양학실험실 (지도교수 조진아)</p>
             <ul class="affil">
@@ -343,7 +345,7 @@
         </div>
         <div class="gallery">
           <article class="card reveal" data-category="gutbrain">
-            <div class="card-thumb">🧠</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="24" y1="150" x2="296" y2="150"/><path d="M34 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="52" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><line x1="73.5" y1="98" x2="73.5" y2="110" stroke-width="4"/><path d="M77 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="95" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><line x1="116.5" y1="98" x2="116.5" y2="110" stroke-width="4"/><path d="M120 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="138" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><line x1="159.5" y1="98" x2="159.5" y2="110" stroke-width="4"/><path d="M163 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="181" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><line x1="202.5" y1="98" x2="202.5" y2="110" stroke-width="4"/><path d="M206 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="224" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><line x1="245.5" y1="98" x2="245.5" y2="110" stroke-width="4"/><path d="M249 150 V96 a18 18 0 0 1 36 0 V150"/><circle cx="267" cy="126" r="6" fill="currentColor" fill-opacity=".25"/><g fill="currentColor" fill-opacity=".18"><rect x="62" y="38" width="24" height="10" rx="5" transform="rotate(-20 74 43)"/><circle cx="128" cy="34" r="6"/><circle cx="140" cy="46" r="4"/><rect x="180" y="44" width="24" height="10" rx="5" transform="rotate(15 192 49)"/><circle cx="246" cy="32" r="6"/><rect x="250" y="52" width="20" height="9" rx="4.5"/></g><text x="296" y="172" text-anchor="end" font-size="11" fill="currentColor" stroke="none" font-family="inherit">tight junction · ER stress</text></svg></div>
             <div class="card-body">
               <span class="card-tag">장–뇌 축 · 우울증</span>
               <h3 class="card-title">Negr1 결핍과 대장염: 성별 특이적 장 장벽·소포체 스트레스</h3>
@@ -351,7 +353,7 @@
             </div>
           </article>
           <article class="card reveal delay-1" data-category="gutbrain">
-            <div class="card-thumb">🦠</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M72 104c-18 0-28-16-20-30-6-16 8-30 24-26 6-14 30-16 38-2 16-6 32 6 28 22 14 8 10 30-6 34-2 14-20 18-30 10-10 8-28 6-34-8z"/><path d="M66 74c10-2 16 4 14 12M84 56c-2 10 8 14 16 10M108 50c2 10 14 12 18 4M132 66c-8 4-8 14 0 18M104 78c6-6 16-4 18 4M78 96c4-8 14-8 18-2M110 100c2-8 12-10 18-4" stroke-opacity=".55"/><path d="M200 54h52a13 13 0 0 1 0 26h-52a13 13 0 0 0 0 26h52a13 13 0 0 1 0 26h-52"/><path d="M150 92c18-22 30-22 44-14" stroke-dasharray="4 5"/><path d="M188 72l7 6-9 3"/><g fill="currentColor" fill-opacity=".25" stroke="none"><circle cx="226" cy="67" r="4"/><circle cx="214" cy="93" r="3.5"/><circle cx="238" cy="119" r="4"/><circle cx="270" cy="93" r="3"/></g><text x="160" y="168" text-anchor="middle" font-size="11" fill="currentColor" stroke="none" font-family="inherit">gut–brain axis</text></svg></div>
             <div class="card-body">
               <span class="card-tag">장–뇌 축 · 우울증</span>
               <h3 class="card-title">우울 증상자 분변 미생물 이식(FMT)과 인지 기능</h3>
@@ -359,7 +361,7 @@
             </div>
           </article>
           <article class="card reveal delay-2" data-category="env">
-            <div class="card-thumb">🧪</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M44 110 L70 95 L96 110 L122 95 L148 110 L174 95"/><path d="M148 110 L148 138 L172 152"/><line x1="171" y1="95" x2="171" y2="68"/><line x1="177" y1="95" x2="177" y2="68"/><line x1="174" y1="95" x2="198" y2="110"/><text x="174" y="62" text-anchor="middle" font-size="13" fill="currentColor" stroke="none" font-family="inherit">O</text><text x="212" y="115" text-anchor="middle" font-size="13" fill="currentColor" stroke="none" font-family="inherit">OH</text><text x="96" y="160" text-anchor="middle" font-size="11" fill="currentColor" stroke="none" font-family="inherit">2-ethylhexanoic acid</text><circle cx="262" cy="86" r="13" fill="currentColor" fill-opacity=".15"/><path d="M262 73V50M251 80l-16-12M273 80l16-12M255 98l-10 18M269 98l8 22M262 50l-8-8M262 50l8-8"/></svg></div>
             <div class="card-body">
               <span class="card-tag">환경 유해물질</span>
               <h3 class="card-title">가소제 DEHP 대사산물 2-EHA와 주요우울장애</h3>
@@ -367,7 +369,7 @@
             </div>
           </article>
           <article class="card reveal" data-category="food">
-            <div class="card-thumb">🌰</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M126 82q34-40 68 0z" fill="currentColor" fill-opacity=".15"/><path d="M140 70l8 10M152 64l8 14M166 62l6 16M180 66l2 12" stroke-opacity=".6"/><path d="M160 52l3-12"/><path d="M132 82q-2 52 28 72 30-20 28-72"/><g stroke-width="1.6"><circle cx="70" cy="60" r="7"/><circle cx="72" cy="60" r="1.5" fill="currentColor"/><circle cx="250" cy="70" r="7"/><circle cx="252" cy="70" r="1.5" fill="currentColor"/><circle cx="232" cy="134" r="7"/><circle cx="234" cy="134" r="1.5" fill="currentColor"/><circle cx="88" cy="128" r="7"/><circle cx="90" cy="128" r="1.5" fill="currentColor"/></g><path d="M84 66l26 10M236 76l-24 10M220 128l-22-6M100 124l22-6" stroke-dasharray="3 4" stroke-opacity=".6"/><text x="160" y="174" text-anchor="middle" font-size="11" fill="currentColor" stroke="none" font-family="inherit">radical scavenging</text></svg></div>
             <div class="card-body">
               <span class="card-tag">천연물 기능성</span>
               <h3 class="card-title">도토리(Quercus Fructus) 속껍질과 추출법의 항산화 시너지</h3>
@@ -375,7 +377,7 @@
             </div>
           </article>
           <article class="card reveal delay-1" data-category="food">
-            <div class="card-thumb">🌿</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M96 146C76 96 116 40 196 36c8 62-34 110-100 110z" fill="currentColor" fill-opacity=".12"/><path d="M96 146Q146 100 196 36"/><path d="M120 122l-6-24M120 122l26 4M142 100l-4-30M142 100l30 2M164 74l-2-24M164 74l22 0" stroke-opacity=".6"/><path d="M250 98l16 9v18l-16 9-16-9v-18z"/><path d="M250 104v24M240 110l20 12" stroke-opacity=".0"/><circle cx="250" cy="116" r="7" stroke-opacity=".6"/><line x1="266" y1="107" x2="280" y2="99"/><text x="286" y="98" font-size="11" fill="currentColor" stroke="none" font-family="inherit">OH</text><text x="160" y="172" text-anchor="middle" font-size="11" fill="currentColor" stroke="none" font-family="inherit">Melissa officinalis</text></svg></div>
             <div class="card-body">
               <span class="card-tag">천연물 기능성</span>
               <h3 class="card-title">레몬밤(Melissa officinalis) 추출물의 비만·불안 개선 효과</h3>
@@ -383,7 +385,7 @@
             </div>
           </article>
           <article class="card reveal delay-2" data-category="gutbrain">
-            <div class="card-thumb">🌺</div>
+            <div class="card-thumb"><svg viewBox="0 0 320 180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="66" y="46" width="188" height="104" rx="10"/><circle cx="88" cy="66" r="7" fill="currentColor" fill-opacity="0"/><circle cx="109" cy="66" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="130" cy="66" r="7" fill="currentColor" fill-opacity="0"/><circle cx="151" cy="66" r="7" fill="currentColor" fill-opacity="0.7"/><circle cx="172" cy="66" r="7" fill="currentColor" fill-opacity="0.3"/><circle cx="193" cy="66" r="7" fill="currentColor" fill-opacity="0.3"/><circle cx="214" cy="66" r="7" fill="currentColor" fill-opacity="0"/><circle cx="235" cy="66" r="7" fill="currentColor" fill-opacity="0"/><circle cx="88" cy="87" r="7" fill="currentColor" fill-opacity="0"/><circle cx="109" cy="87" r="7" fill="currentColor" fill-opacity="0"/><circle cx="130" cy="87" r="7" fill="currentColor" fill-opacity="0.3"/><circle cx="151" cy="87" r="7" fill="currentColor" fill-opacity="0.5"/><circle cx="172" cy="87" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="193" cy="87" r="7" fill="currentColor" fill-opacity="0"/><circle cx="214" cy="87" r="7" fill="currentColor" fill-opacity="0"/><circle cx="235" cy="87" r="7" fill="currentColor" fill-opacity="0.5"/><circle cx="88" cy="108" r="7" fill="currentColor" fill-opacity="0.5"/><circle cx="109" cy="108" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="130" cy="108" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="151" cy="108" r="7" fill="currentColor" fill-opacity="0"/><circle cx="172" cy="108" r="7" fill="currentColor" fill-opacity="0"/><circle cx="193" cy="108" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="214" cy="108" r="7" fill="currentColor" fill-opacity="0"/><circle cx="235" cy="108" r="7" fill="currentColor" fill-opacity="0"/><circle cx="88" cy="129" r="7" fill="currentColor" fill-opacity="0.7"/><circle cx="109" cy="129" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="130" cy="129" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="151" cy="129" r="7" fill="currentColor" fill-opacity="0"/><circle cx="172" cy="129" r="7" fill="currentColor" fill-opacity="0"/><circle cx="193" cy="129" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="214" cy="129" r="7" fill="currentColor" fill-opacity="0.15"/><circle cx="235" cy="129" r="7" fill="currentColor" fill-opacity="0.7"/><text x="160" y="172" text-anchor="middle" font-size="11" fill="currentColor" stroke="none" font-family="inherit">Caco-2 · conditioned media · ROS imaging</text></svg></div>
             <div class="card-body">
               <span class="card-tag">국제 연수</span>
               <h3 class="card-title">University of Hawaiʻi at Mānoa 해외 연수 (2025 · 2026)</h3>
